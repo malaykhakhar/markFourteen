@@ -16,13 +16,13 @@ function calculateProfitAndLoss(sellingPrice, costPrice, stocks) {
   if (sellingPrice === costPrice) {
     output.innerText = "Since the initial price and current price is same you wont incur profit or loss"
   } else if (sellingPrice > costPrice) {
-    var profit = (sellingPrice - costPrice) * stocks;
-    var profitPercent = (profit / costPrice) * 100;
+    var profit = ((sellingPrice - costPrice) * stocks).toFixed(2);
+    var profitPercent = ((profit / costPrice) * 100).toFixed(2);
     output.style.color = 'green';
     output.innerText = `The profit is ${profit} and percentage is ${profitPercent}%`;
   } else {
-    var loss = (costPrice - sellingPrice) * stocks;
-    var lossPercent = (loss / costPrice) * 100;
+    var loss = ((costPrice - sellingPrice) * stocks).toFixed(2);
+    var lossPercent = ((loss / costPrice) * 100).toFixed(2);
     output.style.color = 'red';
     output.innerText = `The loss is ${loss} and percentage is ${lossPercent}%`;
   }
