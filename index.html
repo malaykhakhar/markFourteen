@@ -5,6 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stock Profile & Loss Calculator</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <h1 class="heading">Stock Profile & Loss Calculator</h1>
+
+      <label class="input-label">Intial Price</label>
+      <input
+        type="number"
+        class="input"
+        placeholder="Enter Initial Price Here"
+        id="initial-price"
+      />
+
+      <label class="input-label">Quantity of Stocks</label>
+      <input
+        type="number"
+        class="input"
+        placeholder="Enter No of Stocks Bought"
+        id="stocks"
+      />
+
+      <label class="input-label">Current Price</label>
+      <input
+        type="number"
+        class="input"
+        placeholder="Enter Current Price of Stocks"
+        id="current-price"
+      />
+
+      <button class="check-button" id="check-btn">Tell me!!</button>
+      <div class="output"></div>
+    </div>
+
+    <footer>
+      <p>© | 2021 | malaykhakhar</p>
+      <ul class="footer-list">
+        <li>
+          <a href="https://github.com/malaykhakhar" target="_blank"
+            ><img src="/images/github.svg" alt="Github logo"
+          /></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/MalayKhakhar" target="_blank"
+            ><img src="/images/twitter.svg" alt="Twitter logo"
+          /></a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+  <script src="index.js"></script>
 </html>
