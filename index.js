@@ -11,6 +11,13 @@ function emptyInput() {
   return false;
 }
 
+function negativeInput(sellingPrice, costPrice, stocks) {
+  if (sellingPrice < 0 || costPrice < 0 || stocks < 0) {
+    return true;
+  }
+  return false;
+}
+
 function calculateProfitAndLoss(sellingPrice, costPrice, stocks) {
 
   if (sellingPrice === costPrice) {
@@ -35,7 +42,11 @@ function clickHandler() {
     var sellingPrice = Number(currentPrice.value);
     var costPrice = Number(initialPrice.value);
     var stocks = Number(noOfStocks.value);
-    calculateProfitAndLoss(sellingPrice, costPrice, stocks);
+    if (negativeInput(sellingPrice, costPrice, stocks)) {
+      alert("Please enter positive numbers only.");
+    } else {
+      calculateProfitAndLoss(sellingPrice, costPrice, stocks);
+    }
   }
 }
 
